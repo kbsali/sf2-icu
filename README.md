@@ -1,4 +1,16 @@
 sf2-icu
 =======
 
-Set of compiled icu files for Symfony2.* framework
+If you are using Symfony 2.1 on -say- *CentOS*, you might end up getting the unfamous exception ```The country resource bundle could not be loaded for locale "%s"```
+
+Basically Symfony 2.1 uses version 49 of ICU, but some distributions (*CentOS* at least) only provide version 4.2!
+
+There's been some discussion about the subject already : https://github.com/symfony/symfony/issues/5279,
+
+but the *easy* solution of running ```php vendor/symfony/symfony/src/Symfony/Component/Locale/Resources/data/build-data.php 4.2``` requires you to have **(WTF)** *Subversion* installed on your machine/server.
+
+Rather than doing so, grab the tarball of the compiled files form here : ```https://github.com/kbsali/sf2-icu/tarball/master``` and unpack it in ```vendor/symfony/symfony/src/Symfony/Component/Locale/Resources/data/```
+
+Hope this helps.
+
+Any other version needed?
