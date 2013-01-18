@@ -14,3 +14,15 @@ Rather than doing so, grab the tarball of the compiled files form here : ```http
 Hope this helps.
 
 Any other version needed?
+
+How to install
+==============
+
+You could do something like that (kbsali-sf2-icu-XXXX depends on the sha of the last commit) :
+
+```
+wget https://github.com/kbsali/sf2-icu/tarball/master -O icu-42.tgz
+tar xzvf icu-42.tgz
+mv kbsali-sf2-icu-XXXX/4.2 vendor/symfony/symfony/src/Symfony/Component/Locale/Resources/data/
+rm -rf kbsali-sf2-icu-XXXX icu-42.tgz
+```
